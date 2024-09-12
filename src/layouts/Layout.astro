@@ -1,0 +1,28 @@
+---
+import Header from "../components/Header.astro";
+import '../styles/globals.scss'
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Expert track and field logistics services for seamless event management. Specializing in facility planning and construction, equipment setup, timing systems, meet coordination, and athlete communication. Ensure your track and field events run smoothly with our professional services." />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+		<!-- <meta property="og:title" content={title} />
+		<meta property="og:description" content="Expert track and field logistics services for seamless event management. Specializing in facility planning and construction, equipment setup, timing systems, meet coordination, and athlete communication. Ensure your track and field events run smoothly with our professional services." />
+		<meta property="og:image" content="/splash.jpg" />
+		<meta property="og:url" content={`/${route ? route : ''}`} />
+		<meta property="og:type" content="website" />
+		<meta name="robots" content="index" />
+		<meta name="googlebot" content="index" /> -->
+	</head>
+	<body>
+        <Header />
+		<slot />
+	</body>
+</html>

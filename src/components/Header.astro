@@ -1,0 +1,78 @@
+---
+import { Image } from "astro:assets";
+import Menu from "./Menu";
+
+import eventLogo from '../images/ncaa2024color.png';
+import brccLogo from '../images/brccLogo.png';
+import Icons from "./Icons";
+
+const year = new Date().getFullYear()
+
+---
+<header id="header" class="absolute transition -translate-x-full z-50 lg:block lg:translate-x-0 lg:relative lg:float-left">
+    <div class="relative flex flex-col h-screen w-screen md:w-[400px] shadow-right">
+        <div class="flex flex-none justify-center items-center h-40 w-full bg-primary text-white">
+            <Image alt="NCAA Division III logo" src={eventLogo} densities={[2]} class="h-40 w-40" />
+        </div>
+        <div class="flex-auto">
+            <Menu client:load />
+        </div>
+        <div class="flex flex-col gap-3 justify-center items-center pb-10">
+            <div class="block md:hidden"><Image alt="Blue River Cross Country Course logo" src={brccLogo} densities={[2]} class="h-[62px] w-[95px]" /></div>
+            <div class="hidden md:block"><Image alt="Blue River Cross Country Course logo" src={brccLogo} densities={[2]} class="h-[84px] w-[129px]"/></div>
+            <span class="text-[10px]">© {year} Blue River Cross Country Course</span>
+        </div>
+        <div id="menuCollapse" class="flex items-center justify-center hover:bg-[rgba(0,0,0,0.3)] hover:border hover:border-[rgba(0,0,0,0.4)] rounded-md lg:hidden absolute w-9 h-9 right-2 top-2">
+            <Icons icon="Collapse" className="!w-8 !h-8 text-white" />
+        </div>
+    </div>
+</header>
+<div class="lg:hidden fixed top-1 flex items-center bg-[#e4e4e4] shadow-right border border-gray-300 box-border rounded-r-md opacity-95">
+    <div id="menuExpand" class="flex items-center justify-center rounded-md w-9 h-9 m-1">
+        <Icons icon="Expand" className="!w-8 !h-8 text-black" />
+    </div>
+</div>
+<script>
+    const toggleMenu = () => {
+        if (document.getElementById('header')) {
+            document.getElementById('header')!.classList.toggle('openMenu')
+        }
+    }
+
+    const openMenu = () => {
+        if (document.getElementById('header')) {
+            document.getElementById('header')!.classList.add('openMenu')
+        }
+    }
+
+    const closeMenu = () => {
+        if (document.getElementById('header')) {
+            document.getElementById('header')!.classList.remove('openMenu')
+        }
+    }
+
+    window.addEventListener("message", (e) => {
+        console.log(e)
+        if (e.data.activePage && window.innerWidth < 1024) closeMenu()
+        else if (e.data.action) {
+            switch (e.data.action) {
+                case 'close':
+                    closeMenu()
+                case 'open':
+                    openMenu()
+                case 'toggle':
+                    toggleMenu()
+            } 
+        }
+    })
+
+    document.getElementById('menuExpand')?.addEventListener('click', openMenu)
+    document.getElementById('menuCollapse')?.addEventListener('click', closeMenu)
+
+</script>
+<style>
+    .openMenu {
+        --tw-translate-x: 0px;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+</style>

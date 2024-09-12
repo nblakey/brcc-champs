@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@tailwind utilities;
+
+@layer utilities {
+    .h-screen {
+        height: 100dvh;
+    }
+}
+
+:root {
+    --theme-primary: #0D2F50;
+    --theme-secondary: #1EC287;
+    --border-light: #e6e6e6;
+
+    html, body {
+        background: white;
+        font-family: 'Poppins', sans-serif;
+
+        header {
+            a, button {
+                @apply pl-10 relative text-left;
+
+                &:hover, &:focus, &.active {
+                    @apply font-bold outline-none;
+                }
+                
+                &.active::before {
+                    @apply absolute bg-theme-secondary h-8 md:h-10 left-0 w-[10px];
+                    content: '';
+                }
+            }
+        }
+
+        // a {
+        //     position: relative;
+
+        //     &:after {
+        //         background: linear-gradient(to right, var(--theme-secondary), var(--theme-primary));
+        //         bottom: -3px;
+        //         content: '';
+        //         height: 2px;
+        //         left: 0;
+        //         position: absolute;
+        //         right: 0;
+        //     }
+        // }
+
+        // a.inline-link {
+        //     position: relative;
+
+        //         &:after {
+        //             background: linear-gradient(to right, var(--theme-secondary), var(--theme-primary));
+        //             bottom: -3px;
+        //             content: '';
+        //             height: 2px;
+        //             left: 0;
+        //             position: absolute;
+        //             right: 0;
+        //         }
+        // }
+
+        .mui-icon {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            width: 1em;
+            height: 1em;
+            display: inline-block;
+            fill: currentColor;
+            -webkit-flex-shrink: 0;
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+            -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            font-size: 1.5rem;
+            vertical-align: middle;
+        }
+    }
+    
+}
