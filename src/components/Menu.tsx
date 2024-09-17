@@ -4,20 +4,16 @@ const Menu = () => {
     const [activePage, setActivePage] = useState('home')
 
     useEffect(() => {
-        document.getElementsByClassName('active')[0].classList.remove('active')
+        const deactivatedPage = document.getElementsByClassName('active')[0].id
+        document.getElementById(deactivatedPage)?.classList.remove('active')
         document.getElementById(activePage)?.classList.add('active')
 
         window.postMessage({
             activePage: activePage,
+            deactivatedPage: deactivatedPage
         }, window.origin);
 
     }, [activePage])
-
-    const sendMessage = (action: string) => {
-        window.postMessage({
-            action: action
-        }, window.origin)
-    }
 
     return (
         <div className="mt-8 md:mt-14 flex flex-col text-2xl md:text-4xl text-theme-primary gap-8 md:gap-10">

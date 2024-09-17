@@ -1,0 +1,40 @@
+---
+import Directions from "./Directions.astro"
+import Emergency from "./Emergency.astro"
+import Home from "./Home.astro"
+import Information from "./Information.astro"
+import Visitors from "./Visitors.astro"
+---
+<div class="w-full h-screen">
+    <div id="main-home" class="hidden h-full"><Home /></div>
+    <div id="main-meet" class="hidden"><Information /></div>
+    <div id="main-directions" class="hidden"><Directions /></div>
+    <div id="main-visitors" class="hidden"><Visitors /></div>
+    <div id="main-emergency" class="hidden"><Emergency /></div>
+</div>
+<script>
+    window.addEventListener("message", (e) => {
+        if (e.data.activePage) {
+            if (e.data.deactivatedPage) {
+                document.getElementById('main-' + e.data.deactivatedPage)?.classList.add('hidden')
+            }
+
+            document.getElementById('main-' + e.data.activePage)?.classList.remove('hidden')
+        }
+    })
+
+    // const openMenu = () => {
+    //     window.postMessage({
+    //         closeMenu: false,
+    //         openMenu: true
+    //     }, window.origin);
+    //     document.body.style.overflow = 'hidden';
+    // };
+
+    // const closeMenu = () => {
+    //     document.body.style.overflow = 'visible';
+    // }
+
+    // document.getElementById('hamburger')?.addEventListener('click', openMenu);
+    // document.getElementById('products')?.addEventListener('click', openMenu);
+</script>
