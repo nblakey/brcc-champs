@@ -1,4 +1,66 @@
 ---
+import Button from "./ui/Button.astro";
 
+import { Content as MeetInformation } from '../content/ncaa/meetInformation.md';
+import { Content as Schedule } from '../content/ncaa/schedule.md';
 ---
-<div>This is the meet information page!</div>
+<div class="flex flex-col m-7 md:m-10 gap-7">
+    <div class="flex gap-4 md:gap-x-10 flex-wrap justify-center md:justify-normal">
+        <Button id="comp" className="active">Competition Info</Button>
+        <Button id="sched">Schedule</Button>
+        <Button href="https://storage.googleapis.com/wzukusers/user-13841706/documents/bc5e9f2bf2af43bf8f8dbf65f2e7b260/Manual_Participant_Region_VI_GreatLakes_FranklinCollegeBlueRiverSports_21.pdf">Participant Manual</Button>
+        <Button href="https://live.alphatiming.net">Results</Button>
+    </div>
+    <div id="info-comp">
+        <div class="mb-7"><MeetInformation /></div>
+        <div class="flex gap-4 md:gap-x-10 flex-wrap justify-center md:justify-normal">
+            <Button href="https://directathletics.com">Entry Info</Button>
+            <Button href="https://public.eventlink.com/tickets?t=90462">Parking</Button>
+            <Button href="https://bluerivercc.com/wp-content/uploads/2023/10/6k-Course-2023-1-scaled.jpg">6K Course Map</Button>
+            <Button href="https://bluerivercc.com/wp-content/uploads/2023/10/8K-Course-2023-scaled.jpg">8K Course Map</Button>
+        </div>
+    </div>
+    <div id="info-sched" class="hidden"><Schedule /></div>
+    <div id="info-manual" class="hidden">Participant Manual</div>
+</div>
+<script>
+    let activeButton = 'comp';
+
+    const getActiveButton = () => {
+        return activeButton;
+    }
+
+    const setActiveButton = (active: string) => {
+        activeButton = active;
+    }
+
+    class Button extends HTMLElement {
+        connectedCallback() {
+            const button = this.querySelector('button');
+            const href = this.dataset.href;
+            const id = this.dataset.id;
+
+            if (href) {
+                button?.addEventListener('click', () => {
+                    window.open(href, '_blank');
+                })
+            } else if (id) {
+                button?.addEventListener('click', () => {
+                    if (id != getActiveButton()) {
+                        document.querySelector(`[data-id=${getActiveButton()}]`)?.classList.remove('active');
+                        document.getElementById(`info-${getActiveButton()}`)?.classList.add('hidden');
+                        document.querySelector(`[data-id=${id}]`)?.classList.add('active');
+                        document.getElementById(`info-${id}`)?.classList.remove('hidden');
+                        setActiveButton(id);
+                    }
+                })
+            }
+        }
+    }
+    customElements.define('astro-button', Button);
+</script>
+<style>
+    tr {
+        white-space: nowrap;
+    }
+</style>

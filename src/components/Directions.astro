@@ -1,4 +1,60 @@
 ---
+import { Image } from "astro:assets";
 
+import parkingMap from '../images/parking.jpeg';
 ---
-<div>This is the directions page!</div>
+<div class="flex flex-col m-5 lg:m-10">
+    <div class="w-full text-center text-2xl md:text-3xl ld:text-4xl font-semibold mb-6 lg:mb-12">Directions to Blue River Memorial Park</div>
+    <div class="grid grid-cols-1 gap-5 xl:grid-cols-2 xl:gap-0">
+        <div class="flex flex-col gap-5 xl:mr-5">
+            <div>
+                <strong>From Indianapolis:</strong>
+                <p>
+                    I-74 East to Exit 116 (State Road 44) approximately 18 miles
+                    Take exit and proceed straight across State Road 44.  
+                    You will be driving between Applebee's and Denny's.  
+                    Continue straight on Lee Boulevard to Blue River Memorial 
+                    Park.  Park entrance will be on your left hand side.  
+                    Look for signage to direct you.
+                </p>
+            </div>
+            <div>
+                <strong>From Cincinnati:</strong>
+                <p>
+                    I-74 West to Exit 116.  From the exit, turn left onto State Road 44. 
+                    You will pass under I-74, and take the first right onto Lee
+                    Boulevard.  You will be driving between Applebee's and Denny's. 
+                    Continue straight on Lee Boulevard to Blue River Memorial Park. 
+                    Park entrance will be on your left hand side.  Look for signage 
+                    to direct you.
+                </p>
+            </div>
+        </div>
+        <div class="min-h-96 h-full w-full">
+            <iframe class="h-full w-full border-0" src="https://www.google.com/maps/embed/v1/place?q=blue+river+memorial+park+725+lee+boulevard&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 gap-5 xl:grid-cols-2 xl:gap-0">
+        <div class="order-2 xl:order-1 xl:pr-5">
+            <Image src={parkingMap} alt="Illustrated map of the parking areas around Blue River Memorial Park" class="mx-auto xl:mx-0" />
+        </div>
+        <div class="order-1 flex flex-col gap-5 mt-5 xl:order-2">
+            <div>
+                <strong>Team parking:</strong>
+                <p>
+                    Team buses and vans will park and/or unload at the Shelby County
+                    Fairgrounds, entering from 500 Frank Street.
+                </p>
+            </div>
+            <div>
+                <strong>Spectator parking:</strong>
+                <p>
+                    Spectator and general public parking is available within Blue River
+                    Memorial Park at 725 Lee Boulevard. Parking attendants will assist
+                    you with parking areas at this site, and there is a $10 parking
+                    charge, cash only. Exact change appreciated. 
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

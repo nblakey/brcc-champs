@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 @tailwind utilities;
 
 @layer utilities {
@@ -28,6 +28,22 @@
                 &.active::before {
                     @apply absolute bg-theme-secondary h-8 md:h-10 left-0 w-[10px];
                     content: '';
+                }
+            }
+        }
+
+        tr {
+            vertical-align: top;
+
+            td {
+                padding-bottom: 15px;
+
+                &:first-child {
+                    padding-right: 15px;
+                }
+
+                strong {
+                    white-space: nowrap;
                 }
             }
         }

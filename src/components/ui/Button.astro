@@ -1,0 +1,19 @@
+---
+type Props = {
+    className?: string
+    href?: string
+    id?: string
+}
+
+const { className, href, id } = Astro.props
+---
+<astro-button data-href={href} data-id={id} class={className}>
+    <button class="border-2 border-theme-primary rounded-[40px] py-3 text-sm md:text-base w-[150px] md:w-48 text-theme-primary">
+        <slot />
+    </button>
+</astro-button>
+<style>
+    .active button {
+        @apply bg-theme-primary text-white;
+    }
+</style>
