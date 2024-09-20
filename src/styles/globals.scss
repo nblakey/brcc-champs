@@ -9,7 +9,7 @@
 
 :root {
     --theme-primary: #0D2F50;
-    --theme-secondary: #1EC287;
+    --theme-secondary: #19943C;
     --border-light: #e6e6e6;
 
     html, body {
@@ -32,49 +32,45 @@
             }
         }
 
-        tr {
-            vertical-align: top;
+        #info-sched {
+            tr {
+                vertical-align: top;
 
-            td {
-                padding-bottom: 15px;
+                td {
+                    padding-bottom: 15px;
 
-                &:first-child {
-                    padding-right: 15px;
-                }
+                    &:first-child {
+                        padding-right: 15px;
+                    }
 
-                strong {
-                    white-space: nowrap;
+                    strong {
+                        white-space: nowrap;
+                    }
                 }
             }
         }
 
-        // a {
-        //     position: relative;
+        .contact-info {
+            table {
+                @apply mx-auto;
+            }
 
-        //     &:after {
-        //         background: linear-gradient(to right, var(--theme-secondary), var(--theme-primary));
-        //         bottom: -3px;
-        //         content: '';
-        //         height: 2px;
-        //         left: 0;
-        //         position: absolute;
-        //         right: 0;
-        //     }
-        // }
+            th, tr, td {
+                @apply text-sm border border-black;
+            }
 
-        // a.inline-link {
-        //     position: relative;
+            th {
+                @apply hidden md:table-cell
+            }
 
-        //         &:after {
-        //             background: linear-gradient(to right, var(--theme-secondary), var(--theme-primary));
-        //             bottom: -3px;
-        //             content: '';
-        //             height: 2px;
-        //             left: 0;
-        //             position: absolute;
-        //             right: 0;
-        //         }
-        // }
+            tr {
+                @apply flex flex-col md:table-row
+            }
+
+            td {
+                @apply p-1 break-words;
+            }
+        }
 
         .mui-icon {
             -webkit-user-select: none;

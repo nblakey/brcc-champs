@@ -9,7 +9,7 @@ import Icons from "./Icons";
 const year = new Date().getFullYear()
 
 ---
-<header id="header" class="bg-white absolute transition -translate-x-full z-50 lg:block lg:translate-x-0 lg:relative lg:float-left">
+<header id="header" class="fixed bg-white transition -translate-x-full z-50 lg:block lg:translate-x-0">
     <div class="relative flex flex-col h-screen w-screen md:w-[400px] shadow-right">
         <a href="https://www.ncaa.com/sports/cross-country-men/d3" class="flex flex-none justify-center items-center h-40 w-full bg-primary">
             <Image alt="NCAA Division III logo" src={eventLogo} densities={[2]} class="h-40 w-40" />
@@ -21,16 +21,26 @@ const year = new Date().getFullYear()
             <div class="block md:hidden"><Image alt="Blue River Cross Country Course logo" src={brccLogo} densities={[2]} class="h-[62px] w-[95px]" /></div>
             <div class="hidden md:block"><Image alt="Blue River Cross Country Course logo" src={brccLogo} densities={[2]} class="h-[84px] w-[129px]"/></div>
             <span class="text-[10px] font-light">© {year} Blue River Cross Country Course</span>
+            <div class="flex gap-2">
+                <a href="https://www.facebook.com/bluerivercrosscountry" target="_blank" class="!pl-0"><Icons icon="Facebook" className="!w-6 !h-6 text-theme-secondary" /></a>
+                <a href="https://twitter.com/bluerivercc" target="_blank" class="!pl-0"><Icons icon="Twitter" className="!w-6 !h-6 text-theme-secondary" /></a>
+            </div>
         </div>
         <div id="menuCollapse" class="flex items-center justify-center hover:bg-[rgba(0,0,0,0.3)] hover:border hover:border-[rgba(0,0,0,0.4)] rounded-md lg:hidden absolute w-9 h-9 right-2 top-2">
             <Icons icon="Collapse" className="!w-8 !h-8 text-white" />
         </div>
     </div>
 </header>
+<!-- Placeholder to keep body content from going behind static header -->
+<div class="hidden lg:block lg:relative lg:float-left">
+    <div class="h-screen w-[400px]"></div>
+</div>
 <div class="lg:hidden fixed top-1 flex items-center bg-[#e4e4e4] shadow-right border border-gray-300 box-border rounded-r-md opacity-75 z-40">
-    <div id="menuExpand" class="flex items-center justify-center rounded-md w-9 h-9 m-1">
+    <div id="menuExpand" class="flex flex-col items-center justify-center rounded-md w-9 h-11 m-1">
         <Icons icon="Expand" className="!w-8 !h-8 text-black" />
+        <span class="text-[9px]">Menu</span>
     </div>
+    
 </div>
 <script>
     const toggleMenu = () => {

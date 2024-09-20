@@ -1,4 +1,58 @@
 ---
+import { Image } from "astro:assets";
 
+import shelbyvilleCircle from '../images/circle.jpg';
+import hotelImg from '../images/hotels.jpg';
+import strandImg from '../images/strand.jpg';
+import restaurantImg from '../images/restaurants.jpg';
 ---
-<div>This is the visitor's guide!</div>
+<div class="flex flex-col gap-4 xl:gap-7">
+    <Image src={shelbyvilleCircle} alt="Overhead view of the main square in Shelbyville, Indiana" densities={[2]} class="max-h-[450px] object-cover" />
+    <div class="flex justify-center px-5 font-semibold text-2xl md:text-4xl xl:text-5xl">Welcome to Shelby County!</div>
+    <div class="flex flex-col gap-6 items-center pb-5 px-10 xl:flex-row xl:items-start xl:justify-between 3xl:gap-24 3xl:justify-center">
+        <a class="flex flex-col gap-3 items-center" target="_blank" href="https://storage.googleapis.com/wzukusers/user-13841706/documents/5bb3aa156e283zBt94BQ/accommodations.pdf">
+            <div class="image-container">
+                <Image src={hotelImg} alt="The inside of a hotel room" densities={[2]} class="image" />
+            </div>
+            <div class="image-text">
+                <div class="header">Accommodations</div>
+                <div class="text">Make your reservations today to ensure you receive the best offers available.</div>
+            </div>
+        </a>
+        <a class="flex flex-col gap-3 items-center" target="_blank" href="https://storage.googleapis.com/wzukusers/user-13841706/documents/5bb3af4bc3896uQm0xNf/THINGS%20TO%20DO.pdf">
+            <div class="image-container">
+                <Image src={strandImg} alt="The outside of the Strand Theatre in Shelbyville, Indiana" densities={[2]} class="image" />
+            </div>
+            <div class="image-text">
+                <div class="header">Things To Do</div>
+                <div class="text">Have a little down time? Click here for fun things to do.</div>
+            </div>
+        </a>
+        <a class="flex flex-col gap-3 items-center" target="_blank" href="https://storage.googleapis.com/wzukusers/user-13841706/documents/5bb3a8635132cfhiLmBu/eateries.pdf">
+            <div class="image-container">
+                <Image src={restaurantImg} alt="A couple at a dinner table at a restaurant" densities={[2]} class="image" />
+            </div>
+            <div class="image-text">
+                <div class="header">Restaurants</div>
+                <div class="text">We have an abundance of local favorites and nationally known eateries.</div>
+            </div>
+        </a>
+    </div>
+</div>
+<style scoped>
+    .image-container {
+        @apply h-48 w-48 md:w-[300px] md:h-[300px] lg:w-[250px] lg:h-[250px] xl:w-[250px] xl:h-[250px] 2xl:w-[335px] 2xl:h-[335px];
+    }
+    .image {
+        @apply h-full w-full object-cover;
+    }
+    .image-text {
+        @apply flex flex-col items-center max-w-[440px] xl:w-[250px] 2xl:w-[335px];
+    }
+    .header {
+        @apply font-semibold text-lg;
+    }
+    .text {
+        @apply text-base text-center;
+    }
+</style>
