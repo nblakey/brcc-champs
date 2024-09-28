@@ -1,12 +1,16 @@
 ---
 import { Image } from "astro:assets";
-import bigTenImg from "../images/b1g.jpg";
+import ncaaMens from "../images/ncaaMens.jpg";
+import ncaaWomens from "../images/ncaaWomens.jpg";
 import eventLogo from '../images/ncaa2024color.png';
 import franklinLogo from '../images/fcollege.png';
 import shelbyCountyLogo from '../images/SCTVB logo brand.jpg';
+
+// Switch between men's and women's cover photo 50/50
+const imgToLoad = Date.now() % 2 == 0 ? ncaaMens : ncaaWomens
 ---
 <div class="relative flex flex-col h-full">
-    <Image src={bigTenImg} densities={[2]} alt="big ten image" class="absolute top-0 left-0 h-full object-cover z-10" />
+    <Image src={imgToLoad} densities={[2]} alt="runners competing in the 2021 Great Lakes Regional Championships at Blue River Cross Country Course in Shelbyville, IN" class="absolute top-0 left-0 h-full object-cover z-10" />
     <div id="image-gradient" class="flex-auto z-20"></div>
     <div class="flex flex-col md:flex-row gap-8 items-center md:justify-between flex-none w-full bg-theme-primary text-white z-20 p-5">
         <div class="flex items-center gap-4 xl:gap-12">
