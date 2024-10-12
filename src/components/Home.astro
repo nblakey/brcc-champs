@@ -6,11 +6,11 @@ import eventLogo from '../images/ncaa2024color.png';
 import franklinLogo from '../images/fcollege.png';
 import shelbyCountyLogo from '../images/SCTVB logo brand.jpg';
 
-
+const { mens, womens } = Astro.props;
 ---
 <div class="relative flex flex-col h-full">
-    <Image id="ncaaMens" src={ncaaMens} densities={[2]} alt="runners competing in the 2021 Great Lakes Regional Championships at Blue River Cross Country Course in Shelbyville, IN" class="hidden absolute top-0 left-0 h-full object-cover z-10" />
-    <Image id="ncaaWomens" src={ncaaWomens} densities={[2]} alt="runners competing in the 2021 Great Lakes Regional Championships at Blue River Cross Country Course in Shelbyville, IN" class="hidden absolute top-0 left-0 h-full object-cover z-10" />
+    <Image id="ncaaMens" src={mens} densities={[2]} alt="runners competing in the 2021 Great Lakes Regional Championships at Blue River Cross Country Course in Shelbyville, IN" class="hidden absolute top-0 left-0 h-full object-cover z-10" />
+    <Image id="ncaaWomens" src={womens} densities={[2]} alt="runners competing in the 2021 Great Lakes Regional Championships at Blue River Cross Country Course in Shelbyville, IN" class="hidden absolute top-0 left-0 h-full object-cover z-10" />
     <div id="image-gradient" class="flex-auto z-20"></div>
     <div class="flex flex-col md:flex-row gap-8 items-center md:justify-between flex-none w-full bg-theme-primary text-white z-20 p-5">
         <div class="flex items-center gap-4 xl:gap-12">

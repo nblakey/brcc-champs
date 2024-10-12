@@ -1,0 +1,16 @@
+---
+import Main from '../components/Main.astro';
+import Layout from '../layouts/Layout.astro';
+
+import ncaaMens from "../images/ncaaMens.jpg";
+import ncaaWomens from "../images/ncaaWomens.jpg";
+import eventLogo from '../images/ncaa2024color.png';
+import franklinLogo from '../images/fcollege.png';
+import shelbyCountyLogo from '../images/SCTVB logo brand.jpg';
+
+import config from '../config/ncaa.json';
+---
+
+<Layout config={config.meta} route="ncaa">
+    <Main route="ncaa" imagery={{ mens: ncaaMens, womens: ncaaWomens }} />
+</Layout>
