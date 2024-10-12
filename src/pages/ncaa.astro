@@ -9,8 +9,42 @@ import franklinLogo from '../images/fcollege.png';
 import shelbyCountyLogo from '../images/SCTVB logo brand.jpg';
 
 import config from '../config/ncaa.json';
+
+const imagery = {
+    home: {
+        banner: {
+            main: {
+                src: eventLogo,
+                alt: config.home.bannerImageAlt,
+                href: config.home.bannerImageHref
+            },
+            host: [
+                {
+                    src: franklinLogo,
+                    alt: "Franklin College athletics logo",
+                    href: "https://franklingrizzlies.com/",
+                },
+                {
+                    src: shelbyCountyLogo,
+                    alt: "Shelby County Travel & Visitor's Bureau logo",
+                    href: "https://visitshelbycounty.com/"
+                }
+            ]
+        },
+        coverImages: [
+            {
+                "src": ncaaMens,
+                "alt": config.home.coverImageAlt
+            },
+            {
+                "src": ncaaWomens,
+                "alt": config.home.coverImageAlt
+            }
+        ]
+    }
+}
 ---
 
 <Layout config={config.meta} route="ncaa">
-    <Main route="ncaa" imagery={{ mens: ncaaMens, womens: ncaaWomens }} />
+    <Main route="ncaa" config={config} imagery={imagery} />
 </Layout>

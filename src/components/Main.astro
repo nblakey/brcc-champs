@@ -8,7 +8,7 @@ import Visitors from "./Visitors.astro"
 const { config, imagery, route } = Astro.props;
 ---
 <div class="w-full h-screen">
-    <div id="main-home" class="hidden h-full"><Home config={config} mens={imagery.mens} womens={imagery.womens} /></div>
+    <div id="main-home" class="hidden h-full"><Home config={config.home} imagery={imagery.home} /></div>
     <div id="main-meet" class="hidden"><Information route={route} /></div>
     <div id="main-directions" class="hidden"><Directions /></div>
     <div id="main-visitors" class="hidden"><Visitors /></div>

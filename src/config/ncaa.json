@@ -4,5 +4,12 @@
         "description": "The 2024 NCAA Division III Great Lakes Regional Cross Country Championships will be held at Blue River Cross Country Course in Shelbyville, Indiana.",
         "splash": "/ncaaSplash.jpg",
         "favicon": "/ncaaFavicon.png"
+    },
+    "home": {
+        "bannerImageAlt": "NCAA Division III logo",
+        "bannerImageHref": "https://www.ncaa.org/sports/2013/11/6/division-iii-men-s-and-women-s-cross-country.aspx",
+        "coverImageAlt": "runners competing in the 2021 Great Lakes Regional Championships at Blue River Cross Country Course in Shelbyville, IN",
+        "eventName": "NCAA DIII Great Lakes Regional Championships",
+        "eventDescription": "Saturday, November 16th @ 11:00 AM<br>Blue River Cross Country Course - Shelbyville,&nbsp;IN"
     }
 }
