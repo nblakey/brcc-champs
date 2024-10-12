@@ -2,7 +2,7 @@
 import Header from "../components/Header.astro";
 import '../styles/globals.scss'
 
-const { config, route } = Astro.props;
+const { config, imagery, route } = Astro.props;
 ---
 
 <!doctype html>
@@ -23,7 +23,7 @@ const { config, route } = Astro.props;
 		<meta name="googlebot" content="index" />
 	</head>
 	<body>
-        <Header />
+        <Header headerImage={imagery} />
 		<slot />
 	</body>
 </html>

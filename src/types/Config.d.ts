@@ -1,12 +1,10 @@
 type SiteImage = {
-    alt: string,
+    alt: string
     src: string
 }
 
 interface ClickableImage extends SiteImage {
-    alt: string,
     href: string
-    src: string,
 }
 
 type HomeConfig = {
@@ -20,4 +18,16 @@ type HomeImagery = {
         host: ClickableImage[]
     }
     coverImages: SiteImage[]
+}
+
+type HeaderButton = {
+    text: string
+    href: string
+}
+
+type InformationConfig = {
+    headerButtons: HeaderButton[]
+    nestedButtons: {
+        index0: HeaderButton[]
+    }
 }

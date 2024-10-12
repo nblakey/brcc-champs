@@ -5,14 +5,29 @@ import Home from "./Home.astro"
 import Information from "./Information.astro"
 import Visitors from "./Visitors.astro"
 
-const { config, imagery, route } = Astro.props;
+const { config, imagery } = Astro.props;
 ---
 <div class="w-full h-screen">
     <div id="main-home" class="hidden h-full"><Home config={config.home} imagery={imagery.home} /></div>
-    <div id="main-meet" class="hidden"><Information route={route} /></div>
-    <div id="main-directions" class="hidden"><Directions /></div>
-    <div id="main-visitors" class="hidden"><Visitors /></div>
-    <div id="main-contact" class="hidden"><Contact /></div>
+    <div id="main-meet" class="hidden">
+        <Information config={config.information}>
+            <slot name="info" slot="info" />
+            <slot name="schedule" slot="schedule" />
+        </Information>
+    </div>
+    <div id="main-directions" class="hidden">
+        <Directions />
+    </div>
+    <div id="main-visitors" class="hidden">
+        <Visitors />
+    </div>
+    <div id="main-contact" class="hidden">
+        <div class="flex flex-col mx-7 my-10 pb-7 md:pb-10">
+            <div class="mb-7 contact-info">
+                <slot name="contact" />
+            </div>
+        </div>
+    </div>
 </div>
 <script>
     window.addEventListener("message", (e) => {

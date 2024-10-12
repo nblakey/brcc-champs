@@ -8,9 +8,18 @@ import eventLogo from '../images/ncaa2024color.png';
 import franklinLogo from '../images/fcollege.png';
 import shelbyCountyLogo from '../images/SCTVB logo brand.jpg';
 
+import { Content as NCAAContact } from '../content/ncaa/contact.md';
+import { Content as NCAAInfo } from '../content/ncaa/meetInformation.md';
+import { Content as NCAASchedule } from '../content/ncaa/schedule.md';
+
 import config from '../config/ncaa.json';
 
 const imagery = {
+    header: {
+        src: eventLogo,
+        alt: config.header.alt,
+        href: config.header.href
+    },
     home: {
         banner: {
             main: {
@@ -45,6 +54,10 @@ const imagery = {
 }
 ---
 
-<Layout config={config.meta} route="ncaa">
-    <Main route="ncaa" config={config} imagery={imagery} />
-</Layout>
+<Layout config={config.meta} imagery={imagery.header} route="ncaa">
+    <Main route="ncaa" config={config} imagery={imagery}>
+        <NCAAInfo slot="info" />
+        <NCAASchedule slot="schedule" />
+        <NCAAContact slot="contact" />
+    </Main>
+</Layout
