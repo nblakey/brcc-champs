@@ -2,17 +2,18 @@
 import { Image } from "astro:assets";
 import Menu from "./Menu";
 
-import eventLogo from '../images/ncaa2024color.png';
 import brccLogo from '../images/brccLogo.png';
 import Icons from "./Icons";
 
 const year = new Date().getFullYear()
 
+const { headerImage } = Astro.props;
+
 ---
 <header id="header" class="fixed bg-white transition -translate-x-full z-50 lg:block lg:translate-x-0">
     <div class="relative flex flex-col h-screen w-screen md:w-[400px] shadow-right">
-        <a href="https://www.ncaa.org/sports/2013/11/6/division-iii-men-s-and-women-s-cross-country.aspx" class="flex flex-none justify-center items-center h-40 w-full bg-primary">
-            <Image alt="NCAA Division III logo" src={eventLogo} densities={[2]} class="h-40 w-40" />
+        <a href={headerImage.href} class="flex flex-none justify-center items-center h-40 w-full bg-primary">
+            <Image alt={headerImage.alt} src={headerImage.src} densities={[2]} class="h-40 w-40" />
         </a>
         <div class="flex-auto">
             <Menu client:load />

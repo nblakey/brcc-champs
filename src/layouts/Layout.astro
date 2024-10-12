@@ -2,29 +2,28 @@
 import Header from "../components/Header.astro";
 import '../styles/globals.scss'
 
-const title = 'NCAA DIII Great Lakes Regional Championships | Blue River Cross Country Course';
-const description = 'The 2024 NCAA Division III Great Lakes Regional Cross Country Championships will be held at Blue River Cross Country Course in Shelbyville, Indiana.';
+const { config, imagery, route } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
+		<meta name="description" content={config.description} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" href="/favicon.png" />
+		<link rel="icon" href={config.favicon} />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:image" content="/splash.jpg" />
-		<meta property="og:url" content='/' />
+		<title>{config.title}</title>
+		<meta property="og:title" content={config.title} />
+		<meta property="og:description" content={config.description} />
+		<meta property="og:image" content={config.splash} />
+		<meta property="og:url" content={`/${route}`} />
 		<meta property="og:type" content="website" />
 		<meta name="robots" content="index" />
 		<meta name="googlebot" content="index" />
 	</head>
 	<body>
-        <Header />
+        <Header headerImage={imagery} />
 		<slot />
 	</body>
 </html>

@@ -1,29 +1,31 @@
 ---
 import { Image } from "astro:assets";
-import ncaaMens from "../images/ncaaMens.jpg";
-import ncaaWomens from "../images/ncaaWomens.jpg";
-import eventLogo from '../images/ncaa2024color.png';
-import franklinLogo from '../images/fcollege.png';
-import shelbyCountyLogo from '../images/SCTVB logo brand.jpg';
 
+type Props = {
+    config: HomeConfig
+    imagery: HomeImagery
+}
 
+const { config, imagery } = Astro.props;
 ---
 <div class="relative flex flex-col h-full">
-    <Image id="ncaaMens" src={ncaaMens} densities={[2]} alt="runners competing in the 2021 Great Lakes Regional Championships at Blue River Cross Country Course in Shelbyville, IN" class="hidden absolute top-0 left-0 h-full object-cover z-10" />
-    <Image id="ncaaWomens" src={ncaaWomens} densities={[2]} alt="runners competing in the 2021 Great Lakes Regional Championships at Blue River Cross Country Course in Shelbyville, IN" class="hidden absolute top-0 left-0 h-full object-cover z-10" />
+    {imagery.coverImages.map((img, i) => (
+        <Image id={`coverImage-${i}`} src={img.src} alt={img.alt} densities={[2]} class="hidden absolute top-0 left-0 h-full object-cover z-10"/>
+    ))}
     <div id="image-gradient" class="flex-auto z-20"></div>
     <div class="flex flex-col md:flex-row gap-8 items-center md:justify-between flex-none w-full bg-theme-primary text-white z-20 p-5">
         <div class="flex items-center gap-4 xl:gap-12">
-            <a href="https://www.ncaa.org/sports/2013/11/6/division-iii-men-s-and-women-s-cross-country.aspx" class="hidden md:block"><Image alt="NCAA Division III logo" src={eventLogo} densities={[2]} height={150} width={150} class="h-20 w-20 xl:w-28 xl:h-28 hidden md:block" /></a>
+            <a href={imagery.banner.main.href} target="_blank" class="hidden md:block"><Image alt={imagery.banner.main.alt} src={imagery.banner.main.src} densities={[2]} height={150} width={150} class="h-20 w-20 xl:w-28 xl:h-28 hidden md:block" /></a>
             <div class="flex flex-col flex-auto gap-3 text-center md:text-left">
-                <div class="text-2xl xl:text-3xl font-semibold">NCAA DIII Great Lakes Regional Championships</div>
-                <div class="text-base xl:text-lg">Saturday, November 16th @ 11:00 AM<br>Blue River Cross Country Course - Shelbyville,&nbsp;IN</div>
+                <div class="text-2xl xl:text-3xl font-semibold">{config.eventName}</div>
+                <div class="text-base xl:text-lg" set:html={config.eventDescription}></div>
             </div>
         </div>
         <div class="flex gap-3">
-            <a href="https://www.ncaa.org/sports/2013/11/6/division-iii-men-s-and-women-s-cross-country.aspx" class="md:hidden"><Image alt="NCAA Division III logo" src={eventLogo} densities={[2]} height={150} width={150} class="h-20 w-20 xl:w-28 xl:h-28 "/></a>
-            <a href="https://franklingrizzlies.com/" target="_blank"><Image alt="Franklin College athletics logo" src={franklinLogo} densities={[2]} height={150} width={150} class="h-20 w-20 xl:w-28 xl:h-28 "/></a>
-            <a href="https://visitshelbycounty.com/" target="_blank"><Image alt="Shelby County Travel & Visitor's Bureau logo" src={shelbyCountyLogo} densities={[2]} height={150} width={150} class="h-20 w-20 xl:w-28 xl:h-28 " /></a>
+            <a href={imagery.banner.main.href} target="_blank" class="md:hidden"><Image alt={imagery.banner.main.alt} src={imagery.banner.main.src} densities={[2]} height={150} width={150} class="h-20 w-20 xl:w-28 xl:h-28 "/></a>
+            {imagery.banner.host.map((img) => (
+                <a href={img.href} target="_blank"><Image alt={img.alt} src={img.src} densities={[2]} height={150} width={150} class="h-20 w-20 xl:w-28 xl:h-28 "/></a>
+            ))}
         </div>
     </div>
 </div>
@@ -33,7 +35,12 @@ import shelbyCountyLogo from '../images/SCTVB logo brand.jpg';
     }
 </style>
 <script>
-    // Switch between men's and women's cover photo 50/50
-    const imgToLoad = Date.now() % 2 == 0 ? 'ncaaMens' : 'ncaaWomens';
+    let imgToLoad = 'coverImage-0';
+
+    // If there are two cover images, switch between them 50/50
+    if (document.getElementById('coverImage-1')) {
+        imgToLoad = Date.now() % 2 == 0 ? 'coverImage-1' : 'coverImage-0';
+    } 
+
     document.getElementById(imgToLoad)?.classList.remove('hidden');
 </script>

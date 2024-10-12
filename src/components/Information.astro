@@ -1,27 +1,33 @@
 ---
 import Button from "./ui/Button.astro";
 
-import { Content as MeetInformation } from '../content/ncaa/meetInformation.md';
-import { Content as Schedule } from '../content/ncaa/schedule.md';
+type Props = {
+    config: InformationConfig
+}
+
+const { config } = Astro.props;
 ---
 <div class="flex flex-col m-7 pb-7 md:m-10 md:pb-10 gap-7">
     <div class="flex gap-4 md:gap-x-10 flex-wrap justify-center md:justify-normal">
         <Button id="comp" className="active">Competition Info</Button>
         <Button id="sched">Schedule</Button>
-        <Button href="https://ncaaorg.s3.amazonaws.com/championships/sports/crosstrack/d3/crosscountry/2024-25D3XCC_ParticipantManualRegionVI.pdf">Participant Manual</Button>
-        <Button href="https://live.alphatiming.net">Results</Button>
+        {config.headerButtons.map((b) => (
+            <Button href={b.href}>{b.text}</Button>
+        ))}
     </div>
     <div id="info-comp">
-        <div class="mb-7"><MeetInformation /></div>
+        <div class="mb-7">
+            <slot name="info" />
+        </div>
         <div class="flex gap-4 md:gap-x-10 flex-wrap justify-center md:justify-normal">
-            <Button href="https://directathletics.com">Entry Info</Button>
-            <Button href="https://public.eventlink.com/tickets?t=90462">Parking Pass</Button>
-            <Button href="https://bluerivercc.com/wp-content/uploads/2024/10/6K-Course-Map.jpg">6K Course Map</Button>
-            <Button href="https://bluerivercc.com/wp-content/uploads/2024/10/8K-Course-Map.jpg">8K Course Map</Button>
+            {config.nestedButtons.index0.map((b) => (
+                <Button href={b.href}>{b.text}</Button>
+            ))}
         </div>
     </div>
-    <div id="info-sched" class="hidden"><Schedule /></div>
-    <div id="info-manual" class="hidden">Participant Manual</div>
+    <div id="info-sched" class="hidden">
+        <slot name="schedule" />
+    </div>
 </div>
 <script>
     let activeButton = 'comp';

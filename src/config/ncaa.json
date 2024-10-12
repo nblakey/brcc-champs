@@ -1,0 +1,51 @@
+{
+    "meta": {
+        "title": "NCAA DIII Great Lakes Regional Championships | Blue River Cross Country Course",
+        "description": "The 2024 NCAA Division III Great Lakes Regional Cross Country Championships will be held at Blue River Cross Country Course in Shelbyville, Indiana.",
+        "splash": "/ncaaSplash.jpg",
+        "favicon": "/ncaaFavicon.png"
+    },
+    "header": {
+        "alt": "NCAA Division III logo",
+        "href": "https://www.ncaa.org/sports/2013/11/6/division-iii-men-s-and-women-s-cross-country.aspx"
+    },
+    "home": {
+        "bannerImageAlt": "NCAA Division III logo",
+        "bannerImageHref": "https://www.ncaa.org/sports/2013/11/6/division-iii-men-s-and-women-s-cross-country.aspx",
+        "coverImageAlt": "runners competing in the 2021 Great Lakes Regional Championships at Blue River Cross Country Course in Shelbyville, IN",
+        "eventName": "NCAA DIII Great Lakes Regional Championships",
+        "eventDescription": "Saturday, November 16th @ 11:00 AM<br>Blue River Cross Country Course - Shelbyville,&nbsp;IN"
+    },
+    "information": {
+        "headerButtons": [
+            {
+                "text": "Participant Manual",
+                "href": "https://ncaaorg.s3.amazonaws.com/championships/sports/crosstrack/d3/crosscountry/2024-25D3XCC_ParticipantManualRegionVI.pdf"
+            },
+            {
+                "text": "Results",
+                "href": "https://live.alphatiming.net"
+            }
+        ],
+        "nestedButtons": {
+            "index0": [
+                {
+                    "text": "Entry Info",
+                    "href": "https://directathletics.com"
+                },
+                {
+                    "text": "Parking Pass",
+                    "href": "https://public.eventlink.com/tickets?t=90462"
+                },
+                {
+                    "text": "6K Course Map",
+                    "href": "https://bluerivercc.com/wp-content/uploads/2024/10/6K-Course-Map.jpg"
+                },
+                {
+                    "text": "8K Course Map",
+                    "href": "https://bluerivercc.com/wp-content/uploads/2024/10/8K-Course-Map.jpg"
+                }
+            ]
+        }
+    }
+}
