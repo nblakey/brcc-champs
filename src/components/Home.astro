@@ -4,13 +4,13 @@ import { Image } from "astro:assets";
 type Props = {
     config: HomeConfig
     imagery: HomeImagery
-}
+};
 
 const { config, imagery } = Astro.props;
 ---
 <div class="relative flex flex-col h-full">
     {imagery.coverImages.map((img, i) => (
-        <Image id={`coverImage-${i}`} src={img.src} alt={img.alt} densities={[2]} class="hidden absolute top-0 left-0 h-full object-cover z-10"/>
+        <Image id={`coverImage-${i}`} src={img.src} alt={img.alt} densities={[2]} inferSize class="hidden absolute top-0 left-0 h-full object-cover z-10"/>
     ))}
     <div id="image-gradient" class="flex-auto z-20"></div>
     <div class="flex flex-col md:flex-row gap-8 items-center md:justify-between flex-none w-full bg-theme-primary text-white z-20 p-5">
