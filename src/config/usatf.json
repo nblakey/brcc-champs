@@ -1,0 +1,51 @@
+{
+    "meta": {
+        "title": "2024 USATF National Junior Olympics Cross Country Championships | Blue River Cross Country Course",
+        "description": "The 2024 USATF National Junior Olympics Cross Country Championships will be held at Blue River Cross Country Course in Shelbyville, Indiana.",
+        "splash": "/ncaaSplash.jpg",
+        "favicon": "/usatfFavicon.png"
+    },
+    "header": {
+        "alt": "2024 USATF Junior Olympics logo",
+        "href": "https://www.usatf.org/events/2024/2024-usatf-national-junior-olympic-cross-country-c"
+    },
+    "home": {
+        "bannerImageAlt": "2024 USATF Junior Olympics logo",
+        "bannerImageHref": "https://www.usatf.org/events/2024/2024-usatf-national-junior-olympic-cross-country-c",
+        "coverImageAlt": "Artistic photo of the finish line of the Blue River Cross Country Course on a beautiful day",
+        "eventName": "USATF National Junior Olympic Cross Country Championships",
+        "eventDescription": "Saturday, December 14th @ 9:00 AM<br>Blue River Cross Country Course - Shelbyville,&nbsp;IN"
+    },
+    "information": {
+        "headerButtons": [
+            {
+                "text": "Meet Passport",
+                "href": "https://www.flipsnack.com/USATF/2024-usatf-national-joxc-championships-passport/full-view.html"
+            },
+            {
+                "text": "Results",
+                "href": "https://results.adkinstrak.com/meet-list"
+            }
+        ],
+        "nestedButtons": {
+            "index0": [
+                {
+                    "text": "Registration",
+                    "href": "https://www.athletic.net/CrossCountry/meet/239611/register"
+                },
+                {
+                    "text": "Parking Pass",
+                    "href": "https://public.eventlink.com/tickets?t=96600&p=147285"
+                },
+                {
+                    "text": "Course Maps",
+                    "href": "https://bluerivercc.com/maps"
+                },
+                {
+                    "text": "Live Stream",
+                    "href": "https://www.usatf.tv/gprofile.php?do=view_event&event_id=1608&mgroup_id=45365&year=2024"
+                }
+            ]
+        }
+    }
+}

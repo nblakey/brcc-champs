@@ -1,5 +1,9 @@
 type SiteImage = {
     alt: string
+    dims: {
+        height: number
+        width: number
+    }
     src: string
 }
 

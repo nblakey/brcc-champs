@@ -23,7 +23,7 @@ const { config, imagery, route } = Astro.props;
 		<meta name="googlebot" content="index" />
 	</head>
 	<body>
-        <Header headerImage={imagery} />
+        {route !== "index" && <Header headerImage={imagery} />}
 		<slot />
 	</body>
 </html>
