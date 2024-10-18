@@ -36,12 +36,13 @@
             tr {
                 vertical-align: top;
 
+                th {
+                    padding-right: 25px;
+                }
+
                 td {
                     padding-bottom: 15px;
-
-                    &:first-child {
-                        padding-right: 15px;
-                    }
+                    padding-right: 25px;
 
                     strong {
                         white-space: nowrap;

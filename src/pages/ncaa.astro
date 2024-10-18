@@ -6,6 +6,7 @@ import ncaaMens from "../images/ncaaMens.jpg";
 import ncaaWomens from "../images/ncaaWomens.jpg";
 import eventLogo from '../images/ncaa2024color.png';
 import franklinLogo from '../images/fcollege.png';
+import shelbyvilleLogo from '../images/shelbyvilleCity.png';
 import shelbyCountyLogo from '../images/SCTVB logo brand.jpg';
 
 import { Content as NCAAContact } from '../content/ncaa/contact.md';
@@ -17,6 +18,10 @@ import config from '../config/ncaa.json';
 const imagery = {
     header: {
         src: eventLogo,
+        dims: {
+            height: 160,
+            width: 160
+        },
         alt: config.header.alt,
         href: config.header.href
     },
@@ -24,6 +29,10 @@ const imagery = {
         banner: {
             main: {
                 src: eventLogo,
+                dims: {
+                    height: 150,
+                    width: 150
+                },
                 alt: config.home.bannerImageAlt,
                 href: config.home.bannerImageHref
             },
@@ -32,6 +41,11 @@ const imagery = {
                     src: franklinLogo,
                     alt: "Franklin College athletics logo",
                     href: "https://franklingrizzlies.com/",
+                },
+                {
+                    src: shelbyvilleLogo,
+                    alt: "City of Shelbyville logo",
+                    href: "https://www.shelbyville.in.gov/",
                 },
                 {
                     src: shelbyCountyLogo,
