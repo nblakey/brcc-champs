@@ -25,6 +25,10 @@
             {
                 "text": "Results",
                 "href": "https://live.alphatiming.net"
+            },
+            {
+                "text": "Team Rosters",
+                "href": "/ncaaRosters.pdf"
             }
         ],
         "nestedButtons": {
