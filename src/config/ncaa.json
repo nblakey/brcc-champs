@@ -29,6 +29,10 @@
             {
                 "text": "Team Rosters",
                 "href": "/ncaaRosters.pdf"
+            },
+            {
+                "text": "Box Assignments",
+                "href": "ncaaBoxAssignments.pdf"
             }
         ],
         "nestedButtons": {
