@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+
+import Layout from '../layouts/Layout.astro';
+
+import ncaaLogo from '../images/ncaa2024color.png';
+import usatfLogo from '../images/usatf2024jo.png';
+
+import ncaaConfig from '../config/ncaa.json';
+import usatfConfig from '../config/usatf.json';
+
+const meta = {
+    title: "Championship Competitions at Blue River Cross Country Course",
+    description: "Championship Competitions at Blue River Cross Country Course",
+    splash: "/ncaaSplash.jpg",
+    favicon: "/brccFavicon.png"
+};
+---
+<Layout config={meta} route="index">
+    <div class="w-screen h-screen bg-primary flex flex-col gap-10 items-center justify-center text-white">
+        <div class="text-3xl font-bold md:text-4xl lg:text-6xl">Select a competition</div>
+        <div class="flex flex-col gap-10 items-center lg:flex-row">
+            <a class="flex flex-col items-center text-center" href="/ncaa">
+                <Image src={ncaaLogo} alt={ncaaConfig.header.alt} height={160} width={160} densities={[2]} />
+                <span class="max-w-[320px]">{ncaaConfig.home.eventName}</span>
+            </a>
+            <a class="flex flex-col gap-8 items-center text-center" href="/usatf">
+                <Image src={usatfLogo} alt={usatfConfig.header.alt} height={106} width={320} densities={[2]} />
+                <span class="max-w-[320px]">{usatfConfig.home.eventName}</span>
+            </a>
+        </div>
+    </div>
+</Layout>

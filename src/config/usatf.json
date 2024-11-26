@@ -23,16 +23,16 @@
                 "href": "https://www.flipsnack.com/USATF/2024-usatf-national-joxc-championships-passport/full-view.html"
             },
             {
+                "text": "Registration",
+                "href": "https://www.athletic.net/CrossCountry/meet/239611/register"
+            },
+            {
                 "text": "Results",
-                "href": "https://results.adkinstrak.com/meet-list"
+                "href": "https://results.adkinstrak.com/meets/42244"
             }
         ],
         "nestedButtons": {
             "index0": [
-                {
-                    "text": "Registration",
-                    "href": "https://www.athletic.net/CrossCountry/meet/239611/register"
-                },
                 {
                     "text": "Parking Pass",
                     "href": "https://public.eventlink.com/tickets?t=96600&p=147285"

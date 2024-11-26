@@ -1,34 +1,67 @@
 ---
-import { Image } from "astro:assets";
-
+import Main from '../components/Main.astro';
 import Layout from '../layouts/Layout.astro';
 
-import ncaaLogo from '../images/ncaa2024color.png';
-import usatfLogo from '../images/usatf2024jo.png';
+import usatfCover from "../images/usatfCover.jpg";
+import eventLogo from '../images/usatf2024jo.png';
+import usatfLogo from '../images/usatf.png';
+import shelbyvilleLogo from '../images/shelbyvilleCity.png';
+import shelbyTourismLogo from '../images/SCTVB logo brand.jpg';
 
-import ncaaConfig from '../config/ncaa.json';
-import usatfConfig from '../config/usatf.json';
+import { Content as USATFContact } from '../content/usatf/contact.md';
+import { Content as USATFInfo } from '../content/usatf/meetInformation.md';
+import { Content as USATFSchedule } from '../content/usatf/schedule.md';
 
-const meta = {
-    title: "Championship Competitions at Blue River Cross Country Course",
-    description: "Championship Competitions at Blue River Cross Country Course",
-    splash: "/ncaaSplash.jpg",
-    favicon: "/brccFavicon.png"
-};
+import config from '../config/usatf.json';
+
+const imagery = {
+    header: {
+        src: eventLogo,
+        dims: {
+            height: 126,
+            width: 320
+        },
+        alt: config.header.alt,
+        href: config.header.href
+    },
+    home: {
+        banner: {
+            main: {
+                src: usatfLogo,
+                dims: {
+                    height: 150,
+                    width: 106
+                },
+                alt: config.home.bannerImageAlt,
+                href: config.home.bannerImageHref
+            },
+            host: [
+                {
+                    src: shelbyvilleLogo,
+                    alt: "City of Shelbyville logo",
+                    href: "https://www.shelbyville.in.gov/",
+                },
+                {
+                    src: shelbyTourismLogo,
+                    alt: "Shelby County Travel & Visitor's Bureau logo",
+                    href: "https://visitshelbycounty.com/"
+                }
+            ]
+        },
+        coverImages: [
+            {
+                "src": usatfCover,
+                "alt": config.home.coverImageAlt
+            }
+        ]
+    }
+}
 ---
-<Layout config={meta} route="index">
-    <div class="w-screen h-screen bg-primary flex flex-col gap-10 items-center justify-center text-white">
-        <div class="text-3xl font-bold md:text-4xl lg:text-6xl">Select a competition</div>
-        <div class="flex flex-col gap-10 items-center lg:flex-row">
-            <a class="flex flex-col items-center text-center" href="/ncaa">
-                <Image src={ncaaLogo} alt={ncaaConfig.header.alt} height={160} width={160} densities={[2]} />
-                <span class="max-w-[320px]">{ncaaConfig.home.eventName}</span>
-            </a>
-            <a class="flex flex-col gap-8 items-center text-center" href="/usatf">
-                <Image src={usatfLogo} alt={usatfConfig.header.alt} height={106} width={320} densities={[2]} />
-                <span class="max-w-[320px]">{usatfConfig.home.eventName}</span>
-            </a>
-        </div>
-    </div>
-</Layout>
 
+<Layout config={config.meta} imagery={imagery.header} route="usatf">
+    <Main route="usatf" config={config} imagery={imagery}>
+        <USATFInfo slot="info" />
+        <USATFSchedule slot="schedule" />
+        <USATFContact slot="contact" />
+    </Main>
+</Layout
