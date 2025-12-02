@@ -29,23 +29,22 @@
             {
                 "text": "Team Activities",
                 "href": "https://www.flipsnack.com/USATF/2025-joxc-shelbyville-passport"
+            },
+            {
+                "text": "Parking Pass",
+                "href": "https://public.eventlink.com/tickets?t=136355&p=208810"
+            },
+            {
+                "text": "Course Maps",
+                "href": "https://bluerivercc.com/maps"
+            },
+            {
+                "text": "Live Stream",
+                "href": "https://www.usatf.tv/gprofile.php?do=view_event&event_id=1608&mgroup_id=45365&year=2024"
             }
         ],
         "nestedButtons": {
-            "index0": [
-                {
-                    "text": "Parking Pass",
-                    "href": "https://public.eventlink.com/tickets?t=136355&p=208810"
-                },
-                {
-                    "text": "Course Maps",
-                    "href": "https://bluerivercc.com/maps"
-                },
-                {
-                    "text": "Live Stream",
-                    "href": "https://www.usatf.tv/gprofile.php?do=view_event&event_id=1608&mgroup_id=45365&year=2024"
-                }
-            ]
+            "index0": []
         }
     }
 }

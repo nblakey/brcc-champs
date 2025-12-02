@@ -3,7 +3,7 @@
 ---
 **2024 USATF National Junior Olympics Cross Country Championships**
 \
-Saturday, December 13, 2024
+Saturday, December 13, 2025
 \
 \
 **REMINDER**: PETS ARE NOT ALLOWED AT BLUE RIVER MEMORIAL PARK DURING COMPETITION
