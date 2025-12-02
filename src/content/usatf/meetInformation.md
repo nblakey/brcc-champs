@@ -3,16 +3,16 @@
 ---
 **2024 USATF National Junior Olympics Cross Country Championships**
 \
-Saturday, December 14, 2024
+Saturday, December 13, 2024
 \
 \
 **REMINDER**: PETS ARE NOT ALLOWED AT BLUE RIVER MEMORIAL PARK DURING COMPETITION
 \
 \
-**ENTRY INFORMATION**: Online registration and fees for the National Junior Olympic Cross-Cross Championships can be found on [athletic.net](https://www.athletic.net/CrossCountry/meet/239611/register). A non-refundable entry fee of $20 per athlete must be submitted online at the time of registration. Entries cannot be accepted by any other method. There will be no on-site registration, nor will there be day of competition entries.
+**ENTRY INFORMATION**: Online registration and fees for the National Junior Olympic Cross-Cross Championships can be found on [athletic.net](https://www.athletic.net/CrossCountry/meet/264304/register). A non-refundable entry fee of $20 per athlete must be submitted online at the time of registration. Entries cannot be accepted by any other method. There will be no on-site registration, nor will there be day of competition entries.
 \
 \
-Entries will open on 11/25/2024 at 8:00 AM ET and close 12/9/2024 at 11:59 PM ET.
+Entries will close 12/5/2025 at 11:59 PM ET.
 \
 \
 **ADA ACCOMODATIONS**: USATF has specific procedures to be followed by disabled athletes wishing to compete in competitions against able-bodied athletes. Please note that the disabled athlete must first meet the eligibility requirements applicable to the relevant competition including having achieved the required qualifying standard, if any. The disabled athlete is responsible for initiating the ADA accommodations request procedures sufficiently in advance to enable USATF to complete the review and decision-making process prior to the relevant competition. Please visit [www.usatf.org/about/policies](www.usatf.org/about/policies) for more information.
