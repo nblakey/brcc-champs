@@ -1,7 +1,7 @@
 ---
 
 ---
-**2024 USATF National Junior Olympics Cross Country Championships**
+**2025 USATF National Junior Olympics Cross Country Championships**
 \
 Saturday, December 13, 2025
 \
