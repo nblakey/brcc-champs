@@ -1,41 +1,41 @@
 {
     "meta": {
-        "title": "2024 USATF National Junior Olympics Cross Country Championships | Blue River Cross Country Course",
-        "description": "The 2024 USATF National Junior Olympics Cross Country Championships will be held at Blue River Cross Country Course in Shelbyville, Indiana.",
+        "title": "2025 USATF National Junior Olympics Cross Country Championships | Blue River Cross Country Course",
+        "description": "The 2025 USATF National Junior Olympics Cross Country Championships will be held at Blue River Cross Country Course in Shelbyville, Indiana.",
         "splash": "/usatfSplash.jpg",
         "favicon": "/usatfFavicon.png"
     },
     "header": {
-        "alt": "2024 USATF Junior Olympics logo",
-        "href": "https://www.usatf.org/events/2024/2024-usatf-national-junior-olympic-cross-country-c"
+        "alt": "2025 USATF Junior Olympics logo",
+        "href": "https://www.usatf.org/events/2025/2025-usatf-national-junior-olympic-cross-country-c"
     },
     "home": {
-        "bannerImageAlt": "2024 USATF Junior Olympics logo",
+        "bannerImageAlt": "2025 USATF Junior Olympics logo",
         "bannerImageHref": "https://www.usatf.org/events/2024/2024-usatf-national-junior-olympic-cross-country-c",
         "coverImageAlt": "Artistic photo of the finish line of the Blue River Cross Country Course on a beautiful day",
         "eventName": "USATF National Junior Olympic Cross Country Championships",
-        "eventDescription": "Saturday, December 14th @ 9:00 AM<br>Blue River Cross Country Course - Shelbyville,&nbsp;IN"
+        "eventDescription": "Saturday, December 13th @ 9:00 AM<br>Blue River Cross Country Course - Shelbyville,&nbsp;IN"
     },
     "information": {
         "headerButtons": [
             {
-                "text": "Meet Passport",
-                "href": "https://www.flipsnack.com/USATF/2024-usatf-national-joxc-championships-passport/full-view.html"
-            },
-            {
-                "text": "Registration",
-                "href": "https://www.athletic.net/CrossCountry/meet/239611/register"
+                "text": "Tent Rentals",
+                "href": "https://www.flipsnack.com/usatf/2025-joxc-team-tent-pricing"
             },
             {
                 "text": "Results",
-                "href": "https://results.adkinstrak.com/meets/42244"
+                "href": "https://www.athletic.net/CrossCountry/meet/264304/info"
+            },
+            {
+                "text": "Team Activities",
+                "href": "https://www.flipsnack.com/USATF/2025-joxc-shelbyville-passport"
             }
         ],
         "nestedButtons": {
             "index0": [
                 {
                     "text": "Parking Pass",
-                    "href": "https://public.eventlink.com/tickets?t=96600&p=147285"
+                    "href": "https://public.eventlink.com/tickets?t=136355&p=208810"
                 },
                 {
                     "text": "Course Maps",

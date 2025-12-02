@@ -1,10 +1,8 @@
 ---
 ---
-| Title | Name | Email |
-| ----- | ---------------- | --------------- |
-| **USATF Associate Director -Outreach & Grassroots Programs (Meet Director)** | Shontee Bryant | Shontee.Bryant@usatf.org |
-| **USATF Director - Outreach & Grassroots Programs**                          | Robin Beamon   | Robin.Beamon@usatf.org   |
-| **USATF Manager - Outreach & Grassroots Programs**                           | Chelsea Yeadon | Chelsea.Yeadon@usatf.org |
-| **USATF Coordinator – Outreach & Grassroots Programs**                       | Elijah Lewis   | Elijah.Lewis@usatf.org   |
-| **USATF Safe Sport**                                                         | Bailee Cecil   | Elijah.Lewis@usatf.org   |
-| **Facilities Coordinator**                                                   | Gary Nolley    | gary.nolley@gmail.com    |
+| Title | Name | Email | Cell |
+| -------------------------- | --------------- | ----------------------------- | ------------ |
+| **Facilities Coordinator** | Gary Nolley     | director@bluerivercc.com      | 317-401-3737 |
+| **Facilities Coordinator** | Michelle Nolley | michelle.nolley@gmail.com     | 317-403-8594 |
+| **Shelby County Tourism**  | Rachael Ackley  | rachael@visitshelbycounty.com | 317-398-9623 |
+
